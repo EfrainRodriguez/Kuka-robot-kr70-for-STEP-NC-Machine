@@ -1,0 +1,50 @@
+<machine name="kuka_kr70" description="KUKA KR70 robot" 
+  algorithm="robot" >
+
+<default file="KUKA_KR_70_2100.STEP" />
+
+<geometry shape_eid="669449" />
+
+<chain target="tool" >
+  <axis name="a*" min="-360" max="360" >
+    <geometry shape_eid="3238" rotation_axis="280040"/>
+  </axis>
+
+  <axis name="b*" min="-360" max="360" dir_reverse="true">
+    <geometry shape_eid="258533" rotation_axis="18963"/>
+  </axis>
+
+  <axis name="c*" min="-360" max="360">
+    <geometry shape_eid="148549" rotation_axis="221445"/>
+  </axis>
+
+  <axis name="d*" min="-360" max="360" >
+    <geometry shape_eid="694359" rotation_axis="776665"/>
+  </axis>
+
+  <axis name="e*" min="-360" max="360" >
+    <geometry shape_eid="43073" rotation_axis="729398"/>
+    <!-- link 6 -->
+    <geometry shape_eid="188344" />
+    <!-- head -->
+    <!-- <geometry shape_eid="754515" />  -->
+  </axis>
+
+  <!-- <placement shape_eid="754515" axis_face_eid="733536" reversed="true">
+    <location component="xy" shape_eid="754515" face_eid="733536" />
+    <location component="z" shape_eid="754515" face_eid="553996"  />
+  </placement> -->
+
+  <placement shape_eid="188344" axis_face_eid="733534" reversed="true">
+    <location component="yz" shape_eid="188344" face_eid="733534" />
+    <location component="x" shape_eid="188344" face_eid="21937"  />
+  </placement>
+
+</chain>
+
+
+<chain target="workpiece" >
+  <placement location="-1000 -1000 600" />
+</chain>
+
+</machine>
